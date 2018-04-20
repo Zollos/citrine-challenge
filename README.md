@@ -8,8 +8,6 @@ Code challenge exercise for Citrine
 
 ## Usage
 
-* Build with `gradle xcodebuild`
+* Build with `gradle build`
 * Run the unit tests with `gradle test`
-* Perform a device build and upload it to hockeyapp with `gradle integration`. Here you need to specify your sign settings first (see [Signing](Documentation/Parameters.md#sign-settings) ). Open the build.gradle file an follow the instructions.
-* Perform an appstore build with `gradle appstore`. (Also the sign settings are needed).
-
+* Run the SpringBoot application with `gradle bootRun`
