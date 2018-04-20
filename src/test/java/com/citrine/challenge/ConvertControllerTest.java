@@ -19,13 +19,13 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 @AutoConfigureMockMvc
 public class ConvertControllerTest {
 
-    @Autowired
+    @Autowired 
     private MockMvc mvc;
 
     @Test
     public void getHello() throws Exception {
         
-    	String expected = "{\"unit_name\":\"rad/s\",\"multiplication_factor\":2.9088820866572E-4}";
+    	String expected = "{\"unit_name\":\"rad/s\",\"multiplication_factor\":0.00029088820866572}";
         
         mvc.perform(MockMvcRequestBuilders.get("/units/si")
         		.accept(MediaType.APPLICATION_JSON)

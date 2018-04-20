@@ -5,6 +5,8 @@ import java.math.MathContext;
 
 public class Converter {
 
+	public static final String DEGREE = "\u00B0";		// unicode for the degree symbol
+
 	private static final String OPERATORS = "()/*";
 
 	static final MathContext MATH_CONTEXT = new MathContext(14);
@@ -13,7 +15,7 @@ public class Converter {
 		new Conversion("minute", "min", "s", "60"),
 		new Conversion("hour", "h", "s", "3600"),
 		new Conversion("day", "d", "s", "86400"),
-		new Conversion("degree", "°", "rad", "1.7453292519943e-2"),
+		new Conversion("degree", DEGREE, "rad", "1.7453292519943e-2"),
 		new Conversion(null, "'", "rad", "2.9088820866572e-4"),
 		new Conversion("second", "\"", "rad", "4.8481368110954e-6"), 
 		new Conversion("hectare", "ha", "m2", "10000"),

@@ -19,7 +19,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ConvertControllerIT {
-
+	
     @LocalServerPort
     private int port;
 
@@ -46,7 +46,7 @@ public class ConvertControllerIT {
     @Test
     public void testSymbolCase() throws Exception {
     	
-    	String url = base.toString() + "ha*°";
+    	String url = base.toString() + "ha*" + Converter.DEGREE;
     	UnitInfo expected = new UnitInfo("m2*rad", "174.53292519943", Converter.MATH_CONTEXT);
         ResponseEntity<UnitInfo> response = template.getForEntity(url, UnitInfo.class);
         assertThat(response.getBody(), equalTo(expected));
